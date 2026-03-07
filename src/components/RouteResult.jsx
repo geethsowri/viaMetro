@@ -7,22 +7,18 @@ const RouteResult = ({ routeData }) => {
 
     if (!path || path.length === 0) {
         return (
-            <div className="glass-card">
-                <div className="empty-state">
-                    <MapPin />
-                    <p>Select a source and destination to view the optimal route.</p>
-                </div>
+            <div className="empty-state">
+                <MapPin size={64} style={{ strokeWidth: 2 }} />
+                <p>Select a source and destination to view the optimal route.</p>
             </div>
         );
     }
 
-    // Pre-calculate line info per station for rendering
     const isInterchange = (station) => interchanges.find(i => i.station === station);
 
     const getInitialLine = () => {
         if (interchanges.length > 0) return interchanges[0].fromLine;
         if (path.length > 1) {
-            // Find the edge between node 0 and 1
             const from = path[0], to = path[1];
             const edge = networkData.edges.find(e => (e.from === from && e.to === to) || (e.from === to && e.to === from));
             return edge ? edge.line : null;
@@ -33,9 +29,9 @@ const RouteResult = ({ routeData }) => {
     let currentLineColor = getLineColor(getInitialLine());
 
     return (
-        <div className="glass-card">
-            <h2 className="glass-card-title">
-                <Navigation size={20} className="text-accent" />
+        <div className="brutal-card">
+            <h2 className="brutal-card-title">
+                <Navigation size={32} style={{ strokeWidth: 3 }} />
                 Route Overview
             </h2>
 
@@ -76,12 +72,12 @@ const RouteResult = ({ routeData }) => {
                             <div className="timeline-content">
                                 <div className="station-name">{station}</div>
 
-                                {index === 0 && <div className="station-meta text-accent">Journey Starts Here</div>}
-                                {index === path.length - 1 && <div className="station-meta text-accent">Destination Reached</div>}
+                                {index === 0 && <div className="station-meta" style={{ color: '#3366ff' }}>Journey Starts Here</div>}
+                                {index === path.length - 1 && <div className="station-meta" style={{ color: '#00cc66' }}>Destination Reached</div>}
 
                                 {interchangeDetails && (
                                     <div className="interchange-alert">
-                                        <Info size={16} />
+                                        <Info size={24} style={{ strokeWidth: 3 }} />
                                         <span>Change here for <strong>{getLineName(interchangeDetails.toLine)}</strong></span>
                                     </div>
                                 )}

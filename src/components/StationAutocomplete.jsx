@@ -64,7 +64,7 @@ const StationAutocomplete = ({ label, value, onChange, placeholder, unavailableS
                                 </div>
                             ))
                         ) : (
-                            <div className="autocomplete-item" style={{ color: 'var(--color-text-muted)', cursor: 'default' }}>
+                            <div className="autocomplete-item" style={{ color: '#888', cursor: 'default' }}>
                                 No stations found
                             </div>
                         )}
