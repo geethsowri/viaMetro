@@ -1,0 +1,1159 @@
+{
+    "name": "Hyderabad Metro Rail Network Graph",
+    "description": "Adjacency-list graph of the HMR network. Each node is a station; each edge connects two adjacent stations on the same corridor with the line colour(s) it belongs to.",
+    "lines": {
+        "L1": {
+            "name": "Red Line",
+            "color": "#E32227",
+            "terminals": [
+                "Miyapur",
+                "L B Nagar"
+            ]
+        },
+        "L2": {
+            "name": "Blue Line",
+            "color": "#2561AE",
+            "terminals": [
+                "JBS Parade Ground",
+                "MGBS (Imlibun)"
+            ]
+        },
+        "L3": {
+            "name": "Green Line",
+            "color": "#00A651",
+            "terminals": [
+                "Nagole",
+                "Raidurg"
+            ]
+        }
+    },
+    "nodes": {
+        "Miyapur": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "JNTU College": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "KPHB Colony": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Kukatpally": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Balanagar": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Moosapet": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Bharat Nagar": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Erragadda": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "ESI Hospital": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "S.R. Nagar": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Ameerpet": {
+            "lines": [
+                "L1",
+                "L2"
+            ],
+            "interchange": true
+        },
+        "Punjagutta": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Irrum Manzil": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Khairatabad": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Lakdi-ka-pul": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Assembly": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Nampally": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Gandhi Bhavan": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Osmania Medical College": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "MG Bus Station": {
+            "lines": [
+                "L1",
+                "L2"
+            ],
+            "interchange": true
+        },
+        "Malakpet": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "New Market": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Musarambagh": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Dilsukhnagar": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Chaitanyapuri": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "Victoria Memorial": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "L B Nagar": {
+            "lines": [
+                "L1"
+            ],
+            "interchange": false
+        },
+        "JBS Parade Ground": {
+            "lines": [
+                "L2"
+            ],
+            "interchange": false
+        },
+        "Secunderabad West": {
+            "lines": [
+                "L2"
+            ],
+            "interchange": false
+        },
+        "Gandhi Hospital": {
+            "lines": [
+                "L2"
+            ],
+            "interchange": false
+        },
+        "Musheerabad": {
+            "lines": [
+                "L2"
+            ],
+            "interchange": false
+        },
+        "RTC X Roads": {
+            "lines": [
+                "L2"
+            ],
+            "interchange": false
+        },
+        "Chikkadpally": {
+            "lines": [
+                "L2"
+            ],
+            "interchange": false
+        },
+        "Narayanaguda": {
+            "lines": [
+                "L2"
+            ],
+            "interchange": false
+        },
+        "Sultan Bazaar": {
+            "lines": [
+                "L2"
+            ],
+            "interchange": false
+        },
+        "Nagole": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Uppal": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Stadium": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "NGRI": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Habsiguda": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Tarnaka": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Mettuguda": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Secunderabad East": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Parade Ground": {
+            "lines": [
+                "L2",
+                "L3"
+            ],
+            "interchange": true
+        },
+        "Paradise": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Rasoolpura": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Prakash Nagar": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Begumpet": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Madhura Nagar": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Yusufguda": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Road No. 5 Jubilee Hills": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Jubilee Hills Check Post": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Peddamma Gudi": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Madhapur": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Durgam Cheruvu": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "HITEC City": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        },
+        "Raidurg": {
+            "lines": [
+                "L3"
+            ],
+            "interchange": false
+        }
+    },
+    "edges": [
+        {
+            "from": "Miyapur",
+            "to": "JNTU College",
+            "line": "L1",
+            "sequence": [
+                1,
+                2
+            ]
+        },
+        {
+            "from": "JNTU College",
+            "to": "KPHB Colony",
+            "line": "L1",
+            "sequence": [
+                2,
+                3
+            ]
+        },
+        {
+            "from": "KPHB Colony",
+            "to": "Kukatpally",
+            "line": "L1",
+            "sequence": [
+                3,
+                4
+            ]
+        },
+        {
+            "from": "Kukatpally",
+            "to": "Balanagar",
+            "line": "L1",
+            "sequence": [
+                4,
+                5
+            ]
+        },
+        {
+            "from": "Balanagar",
+            "to": "Moosapet",
+            "line": "L1",
+            "sequence": [
+                5,
+                6
+            ]
+        },
+        {
+            "from": "Moosapet",
+            "to": "Bharat Nagar",
+            "line": "L1",
+            "sequence": [
+                6,
+                7
+            ]
+        },
+        {
+            "from": "Bharat Nagar",
+            "to": "Erragadda",
+            "line": "L1",
+            "sequence": [
+                7,
+                8
+            ]
+        },
+        {
+            "from": "Erragadda",
+            "to": "ESI Hospital",
+            "line": "L1",
+            "sequence": [
+                8,
+                9
+            ]
+        },
+        {
+            "from": "ESI Hospital",
+            "to": "S.R. Nagar",
+            "line": "L1",
+            "sequence": [
+                9,
+                10
+            ]
+        },
+        {
+            "from": "S.R. Nagar",
+            "to": "Ameerpet",
+            "line": "L1",
+            "sequence": [
+                10,
+                11
+            ]
+        },
+        {
+            "from": "Ameerpet",
+            "to": "Punjagutta",
+            "line": "L1",
+            "sequence": [
+                11,
+                12
+            ]
+        },
+        {
+            "from": "Punjagutta",
+            "to": "Irrum Manzil",
+            "line": "L1",
+            "sequence": [
+                12,
+                13
+            ]
+        },
+        {
+            "from": "Irrum Manzil",
+            "to": "Khairatabad",
+            "line": "L1",
+            "sequence": [
+                13,
+                14
+            ]
+        },
+        {
+            "from": "Khairatabad",
+            "to": "Lakdi-ka-pul",
+            "line": "L1",
+            "sequence": [
+                14,
+                15
+            ]
+        },
+        {
+            "from": "Lakdi-ka-pul",
+            "to": "Assembly",
+            "line": "L1",
+            "sequence": [
+                15,
+                16
+            ]
+        },
+        {
+            "from": "Assembly",
+            "to": "Nampally",
+            "line": "L1",
+            "sequence": [
+                16,
+                17
+            ]
+        },
+        {
+            "from": "Nampally",
+            "to": "Gandhi Bhavan",
+            "line": "L1",
+            "sequence": [
+                17,
+                18
+            ]
+        },
+        {
+            "from": "Gandhi Bhavan",
+            "to": "Osmania Medical College",
+            "line": "L1",
+            "sequence": [
+                18,
+                19
+            ]
+        },
+        {
+            "from": "Osmania Medical College",
+            "to": "MG Bus Station",
+            "line": "L1",
+            "sequence": [
+                19,
+                20
+            ]
+        },
+        {
+            "from": "MG Bus Station",
+            "to": "Malakpet",
+            "line": "L1",
+            "sequence": [
+                20,
+                21
+            ]
+        },
+        {
+            "from": "Malakpet",
+            "to": "New Market",
+            "line": "L1",
+            "sequence": [
+                21,
+                22
+            ]
+        },
+        {
+            "from": "New Market",
+            "to": "Musarambagh",
+            "line": "L1",
+            "sequence": [
+                22,
+                23
+            ]
+        },
+        {
+            "from": "Musarambagh",
+            "to": "Dilsukhnagar",
+            "line": "L1",
+            "sequence": [
+                23,
+                24
+            ]
+        },
+        {
+            "from": "Dilsukhnagar",
+            "to": "Chaitanyapuri",
+            "line": "L1",
+            "sequence": [
+                24,
+                25
+            ]
+        },
+        {
+            "from": "Chaitanyapuri",
+            "to": "Victoria Memorial",
+            "line": "L1",
+            "sequence": [
+                25,
+                26
+            ]
+        },
+        {
+            "from": "Victoria Memorial",
+            "to": "L B Nagar",
+            "line": "L1",
+            "sequence": [
+                26,
+                27
+            ]
+        },
+        {
+            "from": "JBS Parade Ground",
+            "to": "Secunderabad West",
+            "line": "L2",
+            "sequence": [
+                1,
+                2
+            ]
+        },
+        {
+            "from": "Secunderabad West",
+            "to": "Parade Ground",
+            "line": "L2",
+            "sequence": [
+                2,
+                3
+            ]
+        },
+        {
+            "from": "Parade Ground",
+            "to": "Gandhi Hospital",
+            "line": "L2",
+            "sequence": [
+                3,
+                4
+            ]
+        },
+        {
+            "from": "Gandhi Hospital",
+            "to": "Musheerabad",
+            "line": "L2",
+            "sequence": [
+                4,
+                5
+            ]
+        },
+        {
+            "from": "Musheerabad",
+            "to": "RTC X Roads",
+            "line": "L2",
+            "sequence": [
+                5,
+                6
+            ]
+        },
+        {
+            "from": "RTC X Roads",
+            "to": "Chikkadpally",
+            "line": "L2",
+            "sequence": [
+                6,
+                7
+            ]
+        },
+        {
+            "from": "Chikkadpally",
+            "to": "Narayanaguda",
+            "line": "L2",
+            "sequence": [
+                7,
+                8
+            ]
+        },
+        {
+            "from": "Narayanaguda",
+            "to": "Sultan Bazaar",
+            "line": "L2",
+            "sequence": [
+                8,
+                9
+            ]
+        },
+        {
+            "from": "Sultan Bazaar",
+            "to": "MG Bus Station",
+            "line": "L2",
+            "sequence": [
+                9,
+                10
+            ]
+        },
+        {
+            "from": "MG Bus Station",
+            "to": "Ameerpet",
+            "line": "L2",
+            "sequence": [
+                10,
+                11
+            ]
+        },
+        {
+            "from": "Nagole",
+            "to": "Uppal",
+            "line": "L3",
+            "sequence": [
+                1,
+                2
+            ]
+        },
+        {
+            "from": "Uppal",
+            "to": "Stadium",
+            "line": "L3",
+            "sequence": [
+                2,
+                3
+            ]
+        },
+        {
+            "from": "Stadium",
+            "to": "NGRI",
+            "line": "L3",
+            "sequence": [
+                3,
+                4
+            ]
+        },
+        {
+            "from": "NGRI",
+            "to": "Habsiguda",
+            "line": "L3",
+            "sequence": [
+                4,
+                5
+            ]
+        },
+        {
+            "from": "Habsiguda",
+            "to": "Tarnaka",
+            "line": "L3",
+            "sequence": [
+                5,
+                6
+            ]
+        },
+        {
+            "from": "Tarnaka",
+            "to": "Mettuguda",
+            "line": "L3",
+            "sequence": [
+                6,
+                7
+            ]
+        },
+        {
+            "from": "Mettuguda",
+            "to": "Secunderabad East",
+            "line": "L3",
+            "sequence": [
+                7,
+                8
+            ]
+        },
+        {
+            "from": "Secunderabad East",
+            "to": "Parade Ground",
+            "line": "L3",
+            "sequence": [
+                8,
+                9
+            ]
+        },
+        {
+            "from": "Parade Ground",
+            "to": "Paradise",
+            "line": "L3",
+            "sequence": [
+                9,
+                10
+            ]
+        },
+        {
+            "from": "Paradise",
+            "to": "Rasoolpura",
+            "line": "L3",
+            "sequence": [
+                10,
+                11
+            ]
+        },
+        {
+            "from": "Rasoolpura",
+            "to": "Prakash Nagar",
+            "line": "L3",
+            "sequence": [
+                11,
+                12
+            ]
+        },
+        {
+            "from": "Prakash Nagar",
+            "to": "Begumpet",
+            "line": "L3",
+            "sequence": [
+                12,
+                13
+            ]
+        },
+        {
+            "from": "Begumpet",
+            "to": "Ameerpet",
+            "line": "L3",
+            "sequence": [
+                13,
+                14
+            ]
+        },
+        {
+            "from": "Ameerpet",
+            "to": "Madhura Nagar",
+            "line": "L3",
+            "sequence": [
+                14,
+                15
+            ]
+        },
+        {
+            "from": "Madhura Nagar",
+            "to": "Yusufguda",
+            "line": "L3",
+            "sequence": [
+                15,
+                16
+            ]
+        },
+        {
+            "from": "Yusufguda",
+            "to": "Road No. 5 Jubilee Hills",
+            "line": "L3",
+            "sequence": [
+                16,
+                17
+            ]
+        },
+        {
+            "from": "Road No. 5 Jubilee Hills",
+            "to": "Jubilee Hills Check Post",
+            "line": "L3",
+            "sequence": [
+                17,
+                18
+            ]
+        },
+        {
+            "from": "Jubilee Hills Check Post",
+            "to": "Peddamma Gudi",
+            "line": "L3",
+            "sequence": [
+                18,
+                19
+            ]
+        },
+        {
+            "from": "Peddamma Gudi",
+            "to": "Madhapur",
+            "line": "L3",
+            "sequence": [
+                19,
+                20
+            ]
+        },
+        {
+            "from": "Madhapur",
+            "to": "Durgam Cheruvu",
+            "line": "L3",
+            "sequence": [
+                20,
+                21
+            ]
+        },
+        {
+            "from": "Durgam Cheruvu",
+            "to": "HITEC City",
+            "line": "L3",
+            "sequence": [
+                21,
+                22
+            ]
+        },
+        {
+            "from": "HITEC City",
+            "to": "Raidurg",
+            "line": "L3",
+            "sequence": [
+                22,
+                23
+            ]
+        }
+    ],
+    "interchange_stations": [
+        {
+            "station": "Ameerpet",
+            "connects": [
+                "L1",
+                "L2",
+                "L3"
+            ],
+            "note": "Triple interchange: Red Line (Miyapur–L B Nagar), Blue Line (JBS–MGBS), Green Line (Nagole–Raidurg)"
+        },
+        {
+            "station": "MG Bus Station",
+            "connects": [
+                "L1",
+                "L2"
+            ],
+            "note": "Red Line and Blue Line interchange"
+        },
+        {
+            "station": "Parade Ground",
+            "connects": [
+                "L2",
+                "L3"
+            ],
+            "note": "Blue Line and Green Line interchange"
+        }
+    ],
+    "adjacency_list": {
+        "Miyapur": [
+            "JNTU College"
+        ],
+        "JNTU College": [
+            "Miyapur",
+            "KPHB Colony"
+        ],
+        "KPHB Colony": [
+            "JNTU College",
+            "Kukatpally"
+        ],
+        "Kukatpally": [
+            "KPHB Colony",
+            "Balanagar"
+        ],
+        "Balanagar": [
+            "Kukatpally",
+            "Moosapet"
+        ],
+        "Moosapet": [
+            "Balanagar",
+            "Bharat Nagar"
+        ],
+        "Bharat Nagar": [
+            "Moosapet",
+            "Erragadda"
+        ],
+        "Erragadda": [
+            "Bharat Nagar",
+            "ESI Hospital"
+        ],
+        "ESI Hospital": [
+            "Erragadda",
+            "S.R. Nagar"
+        ],
+        "S.R. Nagar": [
+            "ESI Hospital",
+            "Ameerpet"
+        ],
+        "Ameerpet": [
+            "S.R. Nagar",
+            "Punjagutta",
+            "MG Bus Station",
+            "Begumpet"
+        ],
+        "Punjagutta": [
+            "Ameerpet",
+            "Irrum Manzil"
+        ],
+        "Irrum Manzil": [
+            "Punjagutta",
+            "Khairatabad"
+        ],
+        "Khairatabad": [
+            "Irrum Manzil",
+            "Lakdi-ka-pul"
+        ],
+        "Lakdi-ka-pul": [
+            "Khairatabad",
+            "Assembly"
+        ],
+        "Assembly": [
+            "Lakdi-ka-pul",
+            "Nampally"
+        ],
+        "Nampally": [
+            "Assembly",
+            "Gandhi Bhavan"
+        ],
+        "Gandhi Bhavan": [
+            "Nampally",
+            "Osmania Medical College"
+        ],
+        "Osmania Medical College": [
+            "Gandhi Bhavan",
+            "MG Bus Station"
+        ],
+        "MG Bus Station": [
+            "Osmania Medical College",
+            "Malakpet",
+            "Sultan Bazaar",
+            "Ameerpet"
+        ],
+        "Malakpet": [
+            "MG Bus Station",
+            "New Market"
+        ],
+        "New Market": [
+            "Malakpet",
+            "Musarambagh"
+        ],
+        "Musarambagh": [
+            "New Market",
+            "Dilsukhnagar"
+        ],
+        "Dilsukhnagar": [
+            "Musarambagh",
+            "Chaitanyapuri"
+        ],
+        "Chaitanyapuri": [
+            "Dilsukhnagar",
+            "Victoria Memorial"
+        ],
+        "Victoria Memorial": [
+            "Chaitanyapuri",
+            "L B Nagar"
+        ],
+        "L B Nagar": [
+            "Victoria Memorial"
+        ],
+        "JBS Parade Ground": [
+            "Secunderabad West"
+        ],
+        "Secunderabad West": [
+            "JBS Parade Ground",
+            "Parade Ground"
+        ],
+        "Parade Ground": [
+            "Secunderabad West",
+            "Gandhi Hospital",
+            "Secunderabad East",
+            "Paradise"
+        ],
+        "Gandhi Hospital": [
+            "Parade Ground",
+            "Musheerabad"
+        ],
+        "Musheerabad": [
+            "Gandhi Hospital",
+            "RTC X Roads"
+        ],
+        "RTC X Roads": [
+            "Musheerabad",
+            "Chikkadpally"
+        ],
+        "Chikkadpally": [
+            "RTC X Roads",
+            "Narayanaguda"
+        ],
+        "Narayanaguda": [
+            "Chikkadpally",
+            "Sultan Bazaar"
+        ],
+        "Sultan Bazaar": [
+            "Narayanaguda",
+            "MG Bus Station"
+        ],
+        "Nagole": [
+            "Uppal"
+        ],
+        "Uppal": [
+            "Nagole",
+            "Stadium"
+        ],
+        "Stadium": [
+            "Uppal",
+            "NGRI"
+        ],
+        "NGRI": [
+            "Stadium",
+            "Habsiguda"
+        ],
+        "Habsiguda": [
+            "NGRI",
+            "Tarnaka"
+        ],
+        "Tarnaka": [
+            "Habsiguda",
+            "Mettuguda"
+        ],
+        "Mettuguda": [
+            "Tarnaka",
+            "Secunderabad East"
+        ],
+        "Secunderabad East": [
+            "Mettuguda",
+            "Parade Ground"
+        ],
+        "Paradise": [
+            "Parade Ground",
+            "Rasoolpura"
+        ],
+        "Rasoolpura": [
+            "Paradise",
+            "Prakash Nagar"
+        ],
+        "Prakash Nagar": [
+            "Rasoolpura",
+            "Begumpet"
+        ],
+        "Begumpet": [
+            "Prakash Nagar",
+            "Ameerpet"
+        ],
+        "Madhura Nagar": [
+            "Ameerpet",
+            "Yusufguda"
+        ],
+        "Yusufguda": [
+            "Madhura Nagar",
+            "Road No. 5 Jubilee Hills"
+        ],
+        "Road No. 5 Jubilee Hills": [
+            "Yusufguda",
+            "Jubilee Hills Check Post"
+        ],
+        "Jubilee Hills Check Post": [
+            "Road No. 5 Jubilee Hills",
+            "Peddamma Gudi"
+        ],
+        "Peddamma Gudi": [
+            "Jubilee Hills Check Post",
+            "Madhapur"
+        ],
+        "Madhapur": [
+            "Peddamma Gudi",
+            "Durgam Cheruvu"
+        ],
+        "Durgam Cheruvu": [
+            "Madhapur",
+            "HITEC City"
+        ],
+        "HITEC City": [
+            "Durgam Cheruvu",
+            "Raidurg"
+        ],
+        "Raidurg": [
+            "HITEC City"
+        ]
+    }
+}
