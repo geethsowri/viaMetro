@@ -103,7 +103,7 @@ const App = () => {
     }
 
     if (sourceStation === destinationStation) {
-      setError("Source and destination stations cannot be the same.");
+      setError("Source and destinationnn stations cannot be the same.");
       return;
     }
 
