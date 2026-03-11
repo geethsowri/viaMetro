@@ -464,10 +464,9 @@ label {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: var(--window-bg);
-  border: 4px solid var(--border-color);
+  background: var(--border-color);
+  border: 10px solid var(--border-color);
   z-index: 2;
-  box-shadow: 2px 2px 0 var(--border-color);
 }
 
 .timeline-dot.interchange {
@@ -476,7 +475,7 @@ label {
   left: -2.6rem;
   top: 2px;
   border-radius: 0;
-  background: var(--accent-color);
+  background: var(--border-color);
   animation: none;
 }
 
@@ -484,7 +483,6 @@ label {
   background: var(--window-bg);
   border: 3px solid var(--border-color);
   padding: 1rem 1.5rem;
-  box-shadow: var(--shadow-hard-sm);
   position: relative;
   z-index: 1;
 }
@@ -513,14 +511,12 @@ label {
   align-items: center;
   gap: 0.75rem;
   border: 2px solid var(--border-color);
-  box-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .interchange-alert strong {
   color: var(--accent-color);
 }
 
-/* Empty State */
 .empty-state {
   text-align: center;
   padding: 4rem 2rem;
@@ -540,6 +536,7 @@ label {
   font-weight: 700;
   color: var(--text-main);
 }
+
 /* ===========================
    MOBILE RESPONSIVENESS
    =========================== */
@@ -639,7 +636,8 @@ label {
   }
 
   .os-controls {
-    display: none; /* Hide decorative OS controls on very small screens */
+    display: none;
+    /* Hide decorative OS controls on very small screens */
   }
 
   .os-title {
