@@ -36,74 +36,67 @@ function App() {
   };
 
   return (
-    <div className="os-window">
-      {/* Fake OS Top Bar */}
-      <div className="os-topbar">
-        <div className="os-controls">
-          <div className="os-btn close"></div>
-          <div className="os-btn min"></div>
-          <div className="os-btn max"></div>
+    <div className="app-container">
+      <header className="app-header">
+        <div className="header-title">
+          <Train size={20} className="title-icon" />
+          <h1>viaMetro</h1>
         </div>
-        <div className="os-title">viaMetro.exe</div>
-        <div className="theme-toggle-container">
-          <button
-            className="theme-toggle-btn"
-            onClick={() => setDarkMode(!darkMode)}
-            aria-label="Toggle Theme"
-          >
-            {darkMode ? <Sun size={18} strokeWidth={3} /> : <Moon size={18} strokeWidth={3} />}
-          </button>
-        </div>
-      </div>
+        <button
+          className="icon-btn theme-toggle"
+          onClick={() => setDarkMode(!darkMode)}
+          aria-label="Toggle Theme"
+        >
+          {darkMode ? <Sun size={16} /> : <Moon size={16} />}
+        </button>
+      </header>
 
-      <div className="os-content">
-        {/* Left Sidebar */}
-        <div className="os-sidebar">
-          <h2 className="sidebar-title">
-            <Train size={28} style={{ strokeWidth: 3, verticalAlign: 'middle', marginRight: '8px' }} />
-            Plan Route
-          </h2>
+      <main className="app-main">
+        <aside className="app-sidebar">
+          <div className="panel">
+            <h2 className="panel-title">Route Configuration</h2>
+            <div className="routing-controls">
+              <StationAutocomplete
+                label="Source"
+                placeholder="Select departure"
+                value={source}
+                onChange={(val) => {
+                  setSource(val);
+                  setRouteData(null);
+                }}
+                unavailableStations={destination ? [destination] : []}
+              />
 
-          <StationAutocomplete
-            label="Source Station"
-            placeholder="Search starting station..."
-            value={source}
-            onChange={(val) => {
-              setSource(val);
-              setRouteData(null);
-            }}
-            unavailableStations={destination ? [destination] : []}
-          />
+              <button className="icon-btn swap-btn" onClick={handleSwap} aria-label="Swap stations" title="Swap stations">
+                <ArrowUpDown size={16} />
+              </button>
 
-          <button className="swap-btn" onClick={handleSwap} aria-label="Swap stations">
-            <ArrowUpDown size={24} style={{ strokeWidth: 3 }} />
-          </button>
+              <StationAutocomplete
+                label="Destination"
+                placeholder="Select arrival"
+                value={destination}
+                onChange={(val) => {
+                  setDestination(val);
+                  setRouteData(null);
+                }}
+                unavailableStations={source ? [source] : []}
+              />
 
-          <StationAutocomplete
-            label="Destination Station"
-            placeholder="Search destination..."
-            value={destination}
-            onChange={(val) => {
-              setDestination(val);
-              setRouteData(null);
-            }}
-            unavailableStations={source ? [source] : []}
-          />
+              <button
+                className="btn btn-primary calculate-btn"
+                onClick={handleCalculate}
+                disabled={!source || !destination}
+              >
+                Calculate Route
+              </button>
+            </div>
+          </div>
+        </aside>
 
-          <button
-            className="btn-primary"
-            onClick={handleCalculate}
-            disabled={!source || !destination}
-          >
-            Find Route
-          </button>
-        </div>
-
-        {/* Main Results Panel */}
-        <div className="os-main">
+        <section className="app-content">
           <RouteResult routeData={routeData || {}} />
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 }

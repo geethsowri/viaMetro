@@ -1,4 +1,4 @@
-import { MapPin, Navigation, Info } from 'lucide-react';
+import { MapPin, ArrowRightCircle } from 'lucide-react';
 import { getLineColor, getLineName } from '../utils/routeFinder';
 import networkData from '../data/metro-network-graph.json';
 
@@ -7,9 +7,11 @@ const RouteResult = ({ routeData }) => {
 
     if (!path || path.length === 0) {
         return (
-            <div className="empty-state">
-                <MapPin size={64} style={{ strokeWidth: 2 }} />
-                <p>Select a source and destination to view the optimal route.</p>
+            <div className="panel">
+                <div className="empty-state">
+                    <MapPin size={32} className="empty-state-icon" />
+                    <p>Select departure and destination to view optimal route.</p>
+                </div>
             </div>
         );
     }
@@ -26,59 +28,80 @@ const RouteResult = ({ routeData }) => {
         return null;
     };
 
-    let currentLineColor = getLineColor(getInitialLine());
+    const getJourneyDetails = () => {
+        let currentColor = getLineColor(getInitialLine());
+        return path.map(station => {
+            const interchangeDetails = isInterchange(station);
+            const dotColor = currentColor;
+
+            if (interchangeDetails) {
+                currentColor = getLineColor(interchangeDetails.toLine);
+            }
+
+            return {
+                station,
+                interchangeDetails,
+                lineColor: dotColor,
+                newLineColor: currentColor
+            };
+        });
+    };
+
+    const journeyDetails = getJourneyDetails();
 
     return (
-        <div className="brutal-card">
-            <h2 className="brutal-card-title">
-                <Navigation size={32} style={{ strokeWidth: 3 }} />
-                Route Overview
-            </h2>
+        <div className="panel">
+            <h2 className="panel-title">Route Summary</h2>
 
-            <div className="stats-grid">
-                <div className="stat-box">
-                    <div className="stat-value highlight">{totalStops}</div>
-                    <div className="stat-label">Total Stops</div>
+            <div className="results-grid">
+                <div className="stat-card">
+                    <span className="stat-card-label">Total Stops</span>
+                    <span className="stat-card-value">{totalStops}</span>
                 </div>
-                <div className="stat-box">
-                    <div className="stat-value">₹{fare}</div>
-                    <div className="stat-label">Fare Amount</div>
+                <div className="stat-card">
+                    <span className="stat-card-label">Est. Fare</span>
+                    <span className="stat-card-value">₹{fare}</span>
                 </div>
-                <div className="stat-box">
-                    <div className="stat-value">{interchanges.length}</div>
-                    <div className="stat-label">Interchanges</div>
+                <div className="stat-card">
+                    <span className="stat-card-label">Transfers</span>
+                    <span className="stat-card-value">{interchanges.length}</span>
                 </div>
-                <div className="stat-box">
-                    <div className="stat-value">{path.length > 0 ? (totalStops * 2) + Math.max(0, interchanges.length * 5) : 0}</div>
-                    <div className="stat-label">Mins (Est.)</div>
+                <div className="stat-card">
+                    <span className="stat-card-label">Est. Time</span>
+                    <span className="stat-card-value">
+                        {path.length > 0 ? (totalStops * 2) + Math.max(0, interchanges.length * 5) : 0}m
+                    </span>
                 </div>
             </div>
 
-            <div className="route-timeline">
-                {path.map((station, index) => {
-                    const interchangeDetails = isInterchange(station);
+            <h3 className="panel-title" style={{ marginTop: '1.5rem', borderBottom: 'none', paddingBottom: 0 }}>Itinerary</h3>
 
-                    if (interchangeDetails) {
-                        currentLineColor = getLineColor(interchangeDetails.toLine);
-                    }
-
+            <div className="route-path">
+                {journeyDetails.map(({ station, interchangeDetails, newLineColor }, index) => {
                     return (
-                        <div key={`${station}-${index}`} className="timeline-item">
-                            <div
-                                className={`timeline-dot ${interchangeDetails ? 'interchange' : ''}`}
-                                style={{ borderColor: currentLineColor }}
-                            />
+                        <div key={`${station}-${index}`} className="route-step">
+                            <div className="route-step-indicator">
+                                <div className="route-line" />
+                                <div
+                                    className={`route-dot ${interchangeDetails ? 'interchange' : ''}`}
+                                    style={{
+                                        borderColor: newLineColor,
+                                        backgroundColor: interchangeDetails ? undefined : newLineColor
+                                    }}
+                                />
+                            </div>
 
-                            <div className="timeline-content">
-                                <div className="station-name">{station}</div>
-
-                                {index === 0 && <div className="station-meta" style={{ color: '#3366ff' }}>Journey Starts Here</div>}
-                                {index === path.length - 1 && <div className="station-meta" style={{ color: '#00cc66' }}>Destination Reached</div>}
+                            <div className="route-step-content">
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>
+                                    <span className="station-name">{station}</span>
+                                    {index === 0 && <span className="tag tag-start">Start</span>}
+                                    {index === path.length - 1 && <span className="tag tag-success">End</span>}
+                                </div>
 
                                 {interchangeDetails && (
-                                    <div className="interchange-alert">
-                                        <Info size={24} style={{ strokeWidth: 3 }} />
-                                        <span>Change here for <strong>{getLineName(interchangeDetails.toLine)}</strong></span>
+                                    <div className="interchange-notice">
+                                        <ArrowRightCircle size={12} color={newLineColor} />
+                                        <span>Transfer to <strong style={{ color: newLineColor }}>{getLineName(interchangeDetails.toLine)}</strong></span>
                                     </div>
                                 )}
                             </div>

@@ -29,10 +29,10 @@ const StationAutocomplete = ({ label, value, onChange, placeholder, unavailableS
             <label>{label}</label>
             <div className="autocomplete-wrapper">
                 <div className="input-icon-wrapper">
-                    <Search className="input-icon" size={18} />
+                    <Search className="input-icon" size={14} />
                     <input
                         type="text"
-                        className="select-input"
+                        className="text-input"
                         placeholder={placeholder}
                         value={isOpen ? searchTerm : value}
                         onChange={(e) => {
@@ -64,7 +64,7 @@ const StationAutocomplete = ({ label, value, onChange, placeholder, unavailableS
                                 </div>
                             ))
                         ) : (
-                            <div className="autocomplete-item" style={{ color: '#888', cursor: 'default' }}>
+                            <div className="autocomplete-empty">
                                 No stations found
                             </div>
                         )}
